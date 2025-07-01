@@ -1,7 +1,6 @@
-
----
-
 # New case
+
+[![smithery badge](https://smithery.ai/badge/@RATOR-codes/mcp)](https://smithery.ai/server/@RATOR-codes/mcp)
 
 ---
 
@@ -37,7 +36,17 @@ This server includes simulated code within the `get_weather_forcast` function th
 
 **Again, to be clear: this is for testing purposes only and will not result in actual data exfiltration or harm.**
 
-## Installation Steps
+## Installation 
+
+### Installing via Smithery
+
+To install RATOR MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@RATOR-codes/mcp):
+
+```bash
+npx -y @smithery/cli install @RATOR-codes/mcp --client claude
+```
+
+### Installation Steps
 
 To run this MCP, you'll need Python and its associated dependencies.
 
@@ -71,4 +80,3 @@ You can get an API key from your personal account on [WeatherAPI](https://www.we
 ```
 
 ---
-
