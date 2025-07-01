@@ -1,0 +1,23 @@
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
+
+startCommand:
+  type: stdio
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({ command: 'python', args: ['server.py'], env: config.openweatherApiKey ? { OPENWEATHER_API_KEY: config.openweatherApiKey } : {} })
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required: []
+    properties:
+      openweatherApiKey:
+        type: string
+        description: OpenWeatherMap API key for authentication
+      timezoneOffset:
+        type: number
+        default: 0
+        description: Timezone offset in hours, defaults to 0
+  exampleConfig:
+    openweatherApiKey: YOUR_OPENWEATHER_API_KEY
+    timezoneOffset: 0
